@@ -2,15 +2,15 @@
 
 This app was created to learn more about Angular and Observables from RxJS. 
 
-What I've learned about/touched
-    - Angular
-        - Routing 
-        - Using components and HTML templates
-        - ng-container, ngFor, ngIF
-        - a bit of Angular Service
-        - @Input, @Output
-    - Observables
-        - creating an observable using `from` and using delays to stagger data transmission
+What I've learned about/touched:
+- Angular
+    - Routing 
+    - Using components and HTML templates
+    - `ng-container`, `*ngFor`, `*ngIF`
+    - a bit of Angular Service
+    - `@Input`, `@Output`
+- Observables
+    - creating an observable using `from` and using delays to stagger data transmission
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
