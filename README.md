@@ -4,14 +4,17 @@ This app was created to learn more about Angular and Observables from RxJS.
 
 What I've learned about/touched:
 - Angular
-    - routing 
-    - using components and HTML templates
-    - `ng-container`, `*ngFor`, `*ngIF`
+    - routing: how setup basic page navigation
+    - using components and HTML templates: creating and using different components
+    - `ng-container`, `*ngFor`, `*ngIF`: control what elements appear on the page
     - a bit of Angular Service
-    - `@Input`, `@Output`
+    - `@Input`, `@Output`: how to pass data between parent and child components 
 - Observables
     - creating an observable using `from` and using delays to stagger data transmission
-    - subscribe to an event emitter and use `merge` to create a single observable to subscribe to
+    - subscribe to an event emitter and use `merge` to create a single observable to which I subscribe
+
+Challenges:
+- Most of the challenges came from formatting the page to make it look nice and have the elements you want appear where you want them (css and html)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 

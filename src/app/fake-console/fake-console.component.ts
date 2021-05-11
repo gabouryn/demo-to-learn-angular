@@ -29,19 +29,16 @@ export class FakeConsoleComponent implements OnInit {
   
   scrollToBottom() {
     this.screen.nativeElement.scrollTop = this.screen.nativeElement.scrollHeight;
-    
   }
 
   constructor(private receivedMsgService:GetReceivedMsgService) { }
 
   ngOnInit(): void {
-    this.mergedData.subscribe((msg:SimpleMessage)=> {this.allMessages.push(msg);
-    });
+    this.mergedData.subscribe((msg:SimpleMessage)=> {this.allMessages.push(msg)});
   }
 
   ngAfterViewChecked() {        
     this.scrollToBottom();        
-} 
-
+  } 
 
 }
