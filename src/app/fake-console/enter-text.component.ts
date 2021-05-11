@@ -9,12 +9,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
     `,
     styleUrls: ['./fake-console.component.css']
   })
-  
+
   export class EnterTextComponent {
     
     boxValue: string = '';
     value = '';
-
+    // extends subject
     @Output() enteredText = new EventEmitter<SimpleMessage>();
 
     sendEnteredTextToParent(value:string){

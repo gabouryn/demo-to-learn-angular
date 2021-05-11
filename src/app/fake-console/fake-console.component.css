@@ -62,11 +62,7 @@
     color: white;
   }
 
-  .scrollable{
-    height:270px;
+  .screen{
+    height:250px;
     overflow: auto;
   }
-
-
-
-

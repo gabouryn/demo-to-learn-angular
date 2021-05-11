@@ -1,0 +1,26 @@
+
+  <div class="terminal" >
+  <div class="screen" #screen>
+  <div id="scrollable" #scrollable> 
+  <ng-container *ngFor="let message of allMessages">
+    <app-fake-console-send *ngIf="isSender(message.source)" [msg]="message.text" #sentMsg></app-fake-console-send>
+    <pre class="fromBot" *ngIf="isReceiver(message.source)">{{message.text}}</pre>
+  </ng-container>
+  </div>
+  </div>
+  <enter-text (enteredText)="addText.next($event)"></enter-text>
+</div>
+
+<!-- 
+  <div class="terminal" >
+  <div class="screen">
+  <div id="scrollable" #scrollable>
+  <ng-container>
+    <app-fake-console-send *ngIf="isSender(msg.source)" [msg]="msg.text"></app-fake-console-send>
+    <pre class="fromBot" *ngIf="isReceiver(msg.source)">{{msg.text}}</pre>
+  </ng-container>
+  </div>
+  </div>
+  <enter-text (enteredText)="addText.next($event)"></enter-text>
+</div>
+-->

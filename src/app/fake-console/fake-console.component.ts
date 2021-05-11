@@ -1,32 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { merge, interval, concat, Subject } from 'rxjs';
 import { GetReceivedMsgService } from './get-received-msg.service';
 import { SimpleMessage, Source } from './message.component';
 
 @Component({
   selector: 'fake-console',
-  template:`
-  <div class="terminal" >
-  <div class="scrollable">
-  <div>
-  <ng-container *ngFor="let message of messages">
-    <app-fake-console-send *ngIf="isSender(message.source)" [msg]="message.text"></app-fake-console-send>
-    <pre class="fromBot" *ngIf="isReceiver(message.source)">{{message.text}}</pre>
-  </ng-container>
-  </div>
-  </div>
-  <enter-text (enteredText)="addText($event)"></enter-text>
-</div>
-  `,
+  templateUrl:'./fake-console.component.html',
   styleUrls: ['./fake-console.component.css']
 })
 
 export class FakeConsoleComponent implements OnInit {
-  public messages: SimpleMessage[] = [];
+  msg = new SimpleMessage('hi', Source.receiver);
+  allMessages:SimpleMessage[] = [this.msg];
+  
+  addText = new Subject<SimpleMessage>();
 
-  addText(newMessage:SimpleMessage){
-    this.messages.push(newMessage);
-  }
+  mergedData = merge(this.addText, this.receivedMsgService.getReceivedMessages());
+
   isSender(source:Source){
     return source == Source.sender;
   }
@@ -34,13 +24,19 @@ export class FakeConsoleComponent implements OnInit {
   isReceiver(source:Source){
     return source == Source.receiver;
   }
+
+  @ViewChild('screen') private screen!: ElementRef;
   
+  scrollToBottom() {
+    this.screen.nativeElement.scrollTop = this.screen.nativeElement.scrollHeight;
+  }
+
   constructor(private receivedMsgService:GetReceivedMsgService) { }
 
   ngOnInit(): void {
-    this.messages.push(new SimpleMessage("hi", Source.receiver));
-    this.receivedMsgService.getReceivedMessages()
-    .subscribe(msg => this.messages.push(msg));
+    this.mergedData.subscribe((msg:SimpleMessage)=> {this.allMessages.push(msg)
+    this.scrollToBottom();
+    });
   }
 
 
