@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { merge, Subject } from 'rxjs';
 import { GetReceivedMsgService } from '../get-received-msg.service';
-import { SimpleMessage } from '../messageI.component';
+import { SimpleMessage } from '../simple-message';
 
 @Component({
   selector: 'terminal',
@@ -10,10 +10,10 @@ import { SimpleMessage } from '../messageI.component';
 })
 
 export class TerminalComponent implements OnInit {
-  public msg!:SimpleMessage;
+
   private addText = new Subject<SimpleMessage>();
 
-  mergedData = merge(this.addText, this.receivedMsgService.getReceivedMessages());
+  public mergedData = merge(this.addText, this.receivedMsgService.getReceivedMessages());
 
   public addUserText(event:SimpleMessage){
     this.addText.next(event);
@@ -21,7 +21,7 @@ export class TerminalComponent implements OnInit {
 
   @ViewChild('screen') private screen!: ElementRef;
   
-  scrollToBottom() {
+  private scrollToBottom() {
     this.screen.nativeElement.scrollTop = this.screen.nativeElement.scrollHeight;
   }
 

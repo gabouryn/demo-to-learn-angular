@@ -1,15 +1,15 @@
-.sentByMe{
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-    position: relative;
-    text-align: right;
+.sentByMe {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  padding: 0 1rem 1rem;
+  margin: 0;
+  position: relative;
+  text-align: right;
 }
 
-.sentFromElsewhere{
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: rgb(50, 170, 206);
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
+.sentFromElsewhere {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: rgb(50, 170, 206);
+  padding: 0 1rem 1rem;
+  margin: 0;
+}

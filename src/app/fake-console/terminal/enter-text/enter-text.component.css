@@ -1,15 +1,14 @@
-.console-input{
-    position: absolute;
-    bottom: 0;
-    background: rgb(58,58,58);
-    width:100%;
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    height:24px;
+.console-input {
+  position: absolute;
+  bottom: 0;
+  background: rgb(58, 58, 58);
+  width: 100%;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  height: 24px;
+}
 
-  }
-
-  ::placeholder{
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-  }
+::placeholder {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+}

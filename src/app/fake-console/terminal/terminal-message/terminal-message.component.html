@@ -1,0 +1,4 @@
+<ng-container *ngFor="let message of allMessages">
+    <pre class="sentByMe" *ngIf="isSender(message.source)">{{message.text}}</pre>
+    <pre class="sentFromElsewhere" *ngIf="!isSender(message.source)">{{message.text}}</pre>
+</ng-container>
