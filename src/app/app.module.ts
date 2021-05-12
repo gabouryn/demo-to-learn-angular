@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { FakeConsoleComponent } from './fake-console/fake-console.component';
-import {EnterTextComponent} from './fake-console/enter-text.component';
+import { TerminalComponent } from './fake-console/terminal/terminal.component';
+import {EnterTextComponent} from './fake-console/terminal/enter-text/enter-text.component';
 import { FakeConsoleLandingComponent } from './fake-console/fake-console-landing.component';
 import { FormsModule } from '@angular/forms';
-import { FakeConsoleSendComponent } from './fake-console/fake-console-send/fake-console-send.component';
+import { TerminalMessageComponent } from './fake-console/terminal/terminal-message/terminal-message.component';
 import { WaterJugComponent } from './water-jug/water-jug.component';
 
 @NgModule({
@@ -19,10 +19,10 @@ import { WaterJugComponent } from './water-jug/water-jug.component';
     RxjsDemoComponent,
     LandingComponent,
     PageNotFoundComponent,
-    FakeConsoleComponent,
+    TerminalComponent,
     FakeConsoleLandingComponent,
     EnterTextComponent,
-    FakeConsoleSendComponent,
+    TerminalMessageComponent,
     WaterJugComponent
   ],
   imports: [

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, from } from 'rxjs';
 import { delay, concatMap} from 'rxjs/operators';
-import { SimpleMessage, Source } from './message.component';
+import { SimpleMessage, Source } from './messageI.component';
 
 @Injectable({
   providedIn: 'root'

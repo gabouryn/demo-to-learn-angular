@@ -1,0 +1,8 @@
+<div class="terminal">
+  <div class="screen" #screen>
+    <div id="scrollable" #scrollable>
+        <terminal-message [newMsg]="(mergedData|async)" #sentMsg></terminal-message>
+    </div>
+  </div>
+  <enter-text (enteredText)="addUserText($event)"></enter-text>
+</div>

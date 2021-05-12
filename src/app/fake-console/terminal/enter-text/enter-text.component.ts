@@ -1,4 +1,4 @@
-import { SimpleMessage, Source } from './message.component';
+import { SimpleMessage, Source } from '../../messageI.component';
 import { Component, Output, EventEmitter } from '@angular/core';
 
 
@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
     template: `
       <input class="console-input" placeholder = "Message..." type = "text" #box (keyup.enter)="onEnter(box.value)" name="box" \[(ngModel)\]="boxValue">
     `,
-    styleUrls: ['./fake-console.component.css']
+    styleUrls: ['./enter-text.component.css']
   })
 
   export class EnterTextComponent {
