@@ -9,6 +9,7 @@ What I've learned about/touched:
     - `ng-container`, `*ngFor`, `*ngIF`: control what elements appear on the page
     - a bit of Angular Service
     - `@Input`, `@Output`: how to pass data between parent and child components 
+    - use AysncPipe to subscribe to observable within html template
 - Observables
     - creating an observable using `from` and using delays to stagger data transmission
     - subscribe to an event emitter and use `merge` to create a single observable to which I subscribe
